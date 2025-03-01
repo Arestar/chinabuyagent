@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务介绍 - China Buy Agent</title>
+    <meta name="description" content="了解China Buy Agent提供的代购服务范围、流程和费用说明。我们为全球客户提供专业的中国商品代购服务。">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+        .service-icon {
+            font-size: 2.5rem;
+            color: #0d6efd;
+            margin-bottom: 1rem;
+        }
+        .pricing-card {
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            padding: 20px;
+            height: 100%;
+            transition: transform 0.3s;
+        }
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .service-category {
+            border-left: 4px solid #0d6efd;
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">China Buy Agent</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">关于我们</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">服务介绍</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">常见问题</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">联系我们</a></li>
+                </ul>
+                <button class="btn btn-outline-primary me-2" onclick="toggleLanguage()">EN/中文</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主横幅 -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 mb-4">我们的服务</h1>
+            <p class="lead mb-4">专业的中国商品代购服务，让全球购物更简单</p>
+        </div>
+    </section>
+
+    <!-- 服务范围 -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">代购范围</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-category">
+                        <h3>电子产品</h3>
+                        <ul class="list-unstyled">
+                            <li>✓ 智能手机及配件</li>
+                            <li>✓ 电脑及数码产品</li>
+                            <li>✓ 智能家居设备</li>
+                            <li>✓ 摄影器材</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-category">
+                        <h3>服装鞋包</h3>
+                        <ul class="list-unstyled">
+                            <li>✓ 品牌服装</li>
+                            <li>✓ 箱包皮具</li>
+                            <li>✓ 运动用品</li>
+                            <li>✓ 饰品配件</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-category">
+                        <h3>美妆个护</h3>
+                        <ul class="list-unstyled">
+                            <li>✓ 护肤品</li>
+                            <li>✓ 彩妆产品</li>
+                            <li>✓ 美容仪器</li>
+                            <li>✓ 个人护理</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务流程详解 -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">服务流程详解</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="bi bi-chat-dots text-primary me-2"></i>1. 需求沟通</h4>
+                            <p class="card-text">• 提供商品链接或详细描述<br>• 确认商品规格和数量<br>• 预估价格和运费<br>• 确定发货方式和时间</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="bi bi-cart-check text-primary me-2"></i>2. 商品采购</h4>
+                            <p class="card-text">• 确认订单并支付定金<br>• 专业买手实地采购<br>• 验证商品真伪<br>• 确保最优惠价格</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="bi bi-shield-check text-primary me-2"></i>3. 质量验货</h4>
+                            <p class="card-text">• 专业验货团队检查<br>• 商品完整性确认<br>• 拍照录像记录<br>• 包装防护处理</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="bi bi-truck text-primary me-2"></i>4. 国际配送</h4>
+                            <p class="card-text">• 选择最优物流方案<br>• 提供追踪号码<br>• 全程物流跟踪<br>• 确保安全送达</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务费用 -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">服务费用说明</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="pricing-card text-center">
+                        <h3 class="mb-4">基础服务</h3>
+                        <p class="text-primary h4 mb-4">5% 服务费</p>
+                        <ul class="list-unstyled">
+                            <li>✓ 代购服务</li>
+                            <li>✓ 基础验货</li>
+                            <li>✓ 标准包装</li>
+                            <li>✓ 物流跟踪</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-card text-center">
+                        <h3 class="mb-4">优质服务</h3>
+                        <p class="text-primary h4 mb-4">8% 服务费</p>
+                        <ul class="list-unstyled">
+                            <li>✓ 专属买手</li>
+                            <li>✓ 深度验货</li>
+                            <li>✓ 加固包装</li>
+                            <li>✓ 优先发货</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-card text-center">
+                        <h3 class="mb-4">定制服务</h3>
+                        <p class="text-primary h4 mb-4">协商定价</p>
+                        <ul class="list-unstyled">
+                            <li>✓ 专业咨询</li>
+                            <li>✓ 定制方案</li>
+                            <li>✓ VIP服务</li>
+                            <li>✓ 一对一跟进</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="text-muted">注：以上费用不包含商品原价和国际物流费用</p>
+                <a href="contact.html" class="btn btn-primary mt-3">咨询详情</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>China Buy Agent</h5>
+                    <p>您的专业中国代购服务商</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>联系我们</h5>
+                    <p>Email: contact@chinabuyagent.com</p>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 China Buy Agent. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleLanguage() {
+            // 语言切换功能将在后续实现
+            alert('语言切换功能开发中...');
+        }
+    </script>
+</body>
+</html>
