@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - China Buy Agent</title>
+    <meta name="description" content="联系China Buy Agent，获取专业的中国商品代购服务。我们提供多种联系方式，随时为您解答问题。">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+        .contact-info-card {
+            padding: 20px;
+            border-radius: 10px;
+            background: #f8f9fa;
+            margin-bottom: 20px;
+        }
+        .contact-icon {
+            font-size: 2rem;
+            color: #0d6efd;
+            margin-bottom: 1rem;
+        }
+        .form-control:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">China Buy Agent</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">关于我们</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">服务介绍</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">常见问题</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">联系我们</a></li>
+                </ul>
+                <button class="btn btn-outline-primary me-2" onclick="toggleLanguage()">EN/中文</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主横幅 -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 mb-4">联系我们</h1>
+            <p class="lead mb-4">随时为您提供专业的咨询服务</p>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contact-info-card text-center">
+                        <i class="bi bi-envelope contact-icon"></i>
+                        <h3>电子邮件</h3>
+                        <p>contact@chinabuyagent.com</p>
+                        <p>support@chinabuyagent.com</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-info-card text-center">
+                        <i class="bi bi-whatsapp contact-icon"></i>
+                        <h3>WhatsApp</h3>
+                        <p>+1 (xxx) xxx-xxxx</p>
+                        <p>工作时间: 24/7</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-info-card text-center">
+                        <i class="bi bi-wechat contact-icon"></i>
+                        <h3>微信</h3>
+                        <p>WeChat ID: ChinaBuyAgent</p>
+                        <p>扫描二维码添加</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系表单 -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="text-center mb-4">发送询价单</h2>
+                            <form id="contactForm" onsubmit="return handleSubmit(event)">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">您的姓名</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">电子邮箱</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="country" class="form-label">所在国家/地区</label>
+                                    <input type="text" class="form-control" id="country" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="product" class="form-label">商品链接或描述</label>
+                                    <textarea class="form-control" id="product" rows="3" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">其他要求</label>
+                                    <textarea class="form-control" id="message" rows="3"></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary">提交询价</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 在线客服 -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">在线客服</h2>
+            <p class="mb-4">我们提供全天候在线客服支持，随时解答您的问题</p>
+            <button class="btn btn-lg btn-outline-primary" onclick="openLiveChat()">开始对话</button>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>China Buy Agent</h5>
+                    <p>您的专业中国代购服务商</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>联系我们</h5>
+                    <p>Email: contact@chinabuyagent.com</p>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 China Buy Agent. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleLanguage() {
+            // 语言切换功能将在后续实现
+            alert('语言切换功能开发中...');
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            // 这里添加表单提交逻辑
+            alert('感谢您的询价！我们会尽快与您联系。');
+            document.getElementById('contactForm').reset();
+        }
+
+        function openLiveChat() {
+            // 这里添加在线客服功能
+            alert('在线客服系统即将上线...');
+        }
+    </script>
+</body>
+</html>
