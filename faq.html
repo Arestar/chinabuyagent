@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常见问题 - China Buy Agent</title>
+    <meta name="description" content="了解China Buy Agent的常见问题解答，包括国际物流、支付方式、退换货政策等信息。">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            border-bottom: 1px solid #dee2e6;
+            padding: 1.5rem 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            color: #0d6efd;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            margin-top: 1rem;
+            display: none;
+        }
+        .faq-answer.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">China Buy Agent</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">关于我们</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">服务介绍</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="faq.html">常见问题</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">联系我们</a></li>
+                </ul>
+                <button class="btn btn-outline-primary me-2" onclick="toggleLanguage()">EN/中文</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主横幅 -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 mb-4">常见问题</h1>
+            <p class="lead mb-4">为您解答关于代购服务的各类疑问</p>
+        </div>
+    </section>
+
+    <!-- FAQ内容 -->
+    <section class="py-5">
+        <div class="container">
+            <div class="faq-section">
+                <!-- 订购相关 -->
+                <h2 class="mb-4">订购相关</h2>
+                <div class="faq-item">
+                    <h5 class="faq-question" onclick="toggleAnswer(this)">
+                        如何开始代购服务？
+                        <i class="bi bi-chevron-down"></i>
+                    </h5>
+                    <div class="faq-answer">
+                        <p>开始代购服务非常简单：</p>
+                        <ol>
+                            <li>通过联系方式与我们取得联系</li>
+                            <li>提供您想购买的商品链接或详细描述</li>
+                            <li>我们会为您核实商品信息和价格</li>
+                            <li>确认后支付定金即可开始采购</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h5 class="faq-question" onclick="toggleAnswer(this)">
+                        支持哪些支付方式？
+                        <i class="bi bi-chevron-down"></i>
+                    </h5>
+                    <div class="faq-answer">
+                        <p>我们支持多种国际支付方式：</p>
+                        <ul>
+                            <li>PayPal（推荐国际用户使用）</li>
+                            <li>信用卡支付</li>
+                            <li>银行转账</li>
+                            <li>其他支付方式可协商</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 物流相关 -->
+                <h2 class="mb-4 mt-5">物流相关</h2>
+                <div class="faq-item">
+                    <h5 class="faq-question" onclick="toggleAnswer(this)">
+                        国际物流时效是多久？
+                        <i class="bi bi-chevron-down"></i>
+                    </h5>
+                    <div class="faq-answer">
+                        <p>物流时效因目的地和运输方式不同而异：</p>
+                        <ul>
+                            <li>快递空运：5-10个工作日</li>
+                            <li>标准空运：10-15个工作日</li>
+                            <li>海运：20-40个工作日</li>
+                        </ul>
+                        <p>注：以上时效仅供参考，实际运输时间可能会因天气、海关等因素而有所变化。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h5 class="faq-question" onclick="toggleAnswer(this)">
+                        如何追踪物流状态？
+                        <i class="bi bi-chevron-down"></i>
+                    </h5>
+                    <div class="faq-answer">
+                        <p>发货后，我们会提供：</p>
+                        <ul>
+                            <li>国际物流追踪号码</li>
+                            <li>物流公司官网追踪链接</li>
+                            <li>定期物流状态更新</li>
+                            <li>异常情况及时通知</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 售后服务 -->
+                <h2 class="mb-4 mt-5">售后服务</h2>
+                <div class="faq-item">
+                    <h5 class="faq-question" onclick="toggleAnswer(this)">
+                        商品质量问题如何处理？
+                        <i class="bi bi-chevron-down"></i>
+                    </h5>
+                    <div class="faq-answer">
+                        <p>我们的质量保证政策：</p>
+                        <ul>
+                            <li>发货前进行严格质检</li>
+                            <li>提供商品实拍照片</li>
+                            <li>收货后24小时内可报告质量问题</li>
+                            <li>确认质量问题后按具体情况处理：
+                                <ul>
+                                    <li>退款</li>
+                                    <li>换货</li>
+                                    <li>部分补偿</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h5 class="faq-question" onclick="toggleAnswer(this)">
+                        关税问题如何处理？
+                        <i class="bi bi-chevron-down"></i>
+                    </h5>
+                    <div class="faq-answer">
+                        <p>关于进口关税：</p>
+                        <ul>
+                            <li>不同国家/地区的关税政策不同</li>
+                            <li>我们会提前告知预估关税金额</li>
+                            <li>关税由买家承担</li>
+                            <li>可提供合法清关服务</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>China Buy Agent</h5>
+                    <p>您的专业中国代购服务商</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>联系我们</h5>
+                    <p>Email: contact@chinabuyagent.com</p>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 China Buy Agent. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleLanguage() {
+            // 语言切换功能将在后续实现
+            alert('语言切换功能开发中...');
+        }
+
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.bi');
+            answer.classList.toggle('show');
+            icon.classList.toggle('bi-chevron-up');
+            icon.classList.toggle('bi-chevron-down');
+        }
+    </script>
+</body>
+</html>
